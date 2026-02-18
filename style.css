@@ -264,7 +264,7 @@ form {
 main {
     background-color: var(--medium-grey);
     width: 100%;
-    height: 1000px;
+    padding-bottom: 40px;
 }
 
 /* filter content styling */
@@ -314,16 +314,23 @@ main {
 /* card styling and positioning */
 .cards {
     display: grid;
-    height: 550px;
 
-    grid-template-columns: repeat(auto-fit, minmax(400px, 480px));
+    max-width: 1504px;   
+    margin: 0 auto;      
+    padding: 0 22px;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
     gap: 32px;
-
-    padding: 0px 205px;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+
+    height: 550px;
+    padding: 24px;
+
     background-color: var(--dark-grey);
     color: var(--white);
 
@@ -332,15 +339,19 @@ main {
 }
 
 .card-content {
-    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+
 }
 
 .card-image {
     height: 200px;
-    width: 430px;
-    
-    background-color: var(white);
+    width: 100%;
+
+    background-color: var(--white);
     border-radius: 10px;
+    margin-bottom: 12px;
 }
 
 .card-content .title {
@@ -362,13 +373,17 @@ main {
     padding-top: 8px;
 }
 
+.bottom-content {
+    margin-top: auto;
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 
     gap: 10px;
-    row-gap: 5px;
+    row-gap: 6px;
 }
 
 .tags .tag {
@@ -390,9 +405,20 @@ main {
 }
 
 .price-listing {
+    margin-top: 4px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+
+    line-height: 1;
 }
 
 .price-new {
@@ -410,3 +436,11 @@ main {
     color: var(--purple);
     padding: 5px 10px;
 }
+
+/* coloring the placeholder images based on card number */
+.one .card-image { background-color: var(--card-one); }
+.two .card-image { background-color: var(--card-two); }
+.three .card-image { background-color: var(--card-three); }
+.four .card-image { background-color: var(--card-four); }
+.five .card-image { background-color: var(--card-five); }
+.six .card-image { background-color: var(--card-six); }
