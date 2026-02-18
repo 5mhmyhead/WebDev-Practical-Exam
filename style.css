@@ -119,6 +119,14 @@ form {
     border-radius: 100px;
 }
 
+.search-bar:hover {
+    background-color: var(--light-grey);
+}
+
+.search-bar:focus-within {
+    border: 1px solid var(--light-purple);
+}
+
 .search-bar input {
     font-family: inherit;
     font-size: var(--font-m);
@@ -149,23 +157,24 @@ form {
 
 /* adding button styling on header buttons */
 .button {
+    position: relative;
     display: inline-flex; 
     flex-direction: column;
     justify-content: center;
+
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.4s ease;
 }
 
+/* log in button hover */
 #log-in {
     height: 50px;
     width: 120px;
-
-    border: 1px solid var(--purple);
-    color: var(--purple);
     
-    border-radius: 10px;
+    color: var(--purple);
     padding: 5px 20px;
-    font-weight: 700;
-
-    transition: 0.2s ease;
 }
 
 #log-in:hover {
@@ -173,19 +182,15 @@ form {
     color: var(--medium-grey);
 }
 
+/* sign up button hover */
 #sign-up {
     height: 50px;
     width: 120px;
 
-    border: 1px solid var(--purple);
     background-color: var(--purple);
     color: var(--medium-grey);
 
-    border-radius: 10px;
     padding: 5px 20px;
-    font-weight: 700;
-
-    transition: 0.2s ease;
 }
 
 #sign-up:hover {
@@ -193,17 +198,12 @@ form {
     color: var(--purple);
 }
 
+/* language button hover */
 #lang-button {
     height: 50px;
     width: 50px;
 
-    border: 1px solid var(--purple);
-    
-    border-radius: 10px;
     padding: 10px;
-    font-weight: 700;
-
-    transition: 0.2s ease;
 }
 
 #lang-button:hover {
@@ -219,6 +219,7 @@ form {
    display: block;
 }
 
+/* recommendations section styling */
 section {
     color: var(--white);
 
@@ -233,7 +234,6 @@ section {
 .section-title {
     font-size: var(--font-xl);
     color: var(--white);
-    
 }
 
 .recommended-tags {
@@ -252,12 +252,60 @@ section {
     border-radius: 100px;
 }
 
-.tag span {
-    color: var(--purple);
+.tag img {
+    position: relative;
+    top: 2px;
+    right: 5px;
 }
 
+/* main content styling */
 main {
     background-color: var(--medium-grey);
     width: 100%;
     height: 1000px;
+}
+
+/* filter content styling */
+.filter-menu {
+    color: var(--white);
+    height: 170px;
+    padding: 35px 205px;
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right-filters {
+    font-size: var(--font-s);
+    
+    display: inline-flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.filter {    
+    height: 40px;
+    padding: 0 18px;
+    
+    border: 1px solid var(--dark-purple);
+    border-radius: 100px;
+}
+
+.filter img {
+    position: relative;
+    height: 25px;
+    top: 6px;
+    right: 6px;
+}
+
+.left-filter {
+    height: 40px;
+    padding: 7px 18px;
+
+}
+
+.left-filter img {
+    position: relative;
+    top: 2px;
 }
