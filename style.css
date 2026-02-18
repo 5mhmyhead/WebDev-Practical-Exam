@@ -15,7 +15,9 @@
     --purple: #6D78EB;
     --dark-purple: #464D8B;
     --light-purple: #8EA1FF;
+    
     --white: #FEFFFF;
+    --off-white: #C4C6C7;
 
     /* card image placeholder colors */
     --card-one: #DBEAFE;
@@ -220,7 +222,7 @@ form {
 }
 
 /* recommendations section styling */
-section {
+.recommended {
     color: var(--white);
 
     height: 170px;
@@ -244,7 +246,7 @@ section {
     gap: 20px;
 }
 
-.tag {    
+.recommended-tags .tag {    
     height: 40px;
     padding: 6px 20px;
     
@@ -252,7 +254,7 @@ section {
     border-radius: 100px;
 }
 
-.tag img {
+.recommended-tags .tag img {
     position: relative;
     top: 2px;
     right: 5px;
@@ -268,7 +270,6 @@ main {
 /* filter content styling */
 .filter-menu {
     color: var(--white);
-    height: 170px;
     padding: 35px 205px;
 
     display: flex; 
@@ -284,7 +285,7 @@ main {
     gap: 20px;
 }
 
-.filter {    
+.right-filters .filter {    
     height: 40px;
     padding: 0 18px;
     
@@ -292,7 +293,7 @@ main {
     border-radius: 100px;
 }
 
-.filter img {
+.right-filters .filter img {
     position: relative;
     height: 25px;
     top: 6px;
@@ -308,4 +309,104 @@ main {
 .left-filter img {
     position: relative;
     top: 2px;
+}
+
+/* card styling and positioning */
+.cards {
+    display: grid;
+    height: 550px;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 480px));
+    justify-content: center;
+    gap: 32px;
+
+    padding: 0px 205px;
+}
+
+.card {
+    background-color: var(--dark-grey);
+    color: var(--white);
+
+    border: 1px solid var(--light-grey);
+    border-radius: 20px;
+}
+
+.card-content {
+    margin: 24px;
+}
+
+.card-image {
+    height: 200px;
+    width: 430px;
+    
+    background-color: var(white);
+    border-radius: 10px;
+}
+
+.card-content .title {
+    font-size: var(--font-l);
+    font-weight: 700;
+}
+
+.card-content .description {
+    font-size: var(--font-m);
+    color: var(--off-white);
+
+    padding-top: 3px;
+}
+
+.card-content .instructor {
+    font-size: var(--font-xs);
+    color: var(--off-white);
+
+    padding-top: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    gap: 10px;
+    row-gap: 5px;
+}
+
+.tags .tag {
+    height: 30px;
+    font-size: var(--font-xs);
+    color: var(--off-white);
+
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+
+    padding: 5px 7px;
+}
+
+.tags .tag img {
+    position: relative;
+    right: 2px;
+    bottom: 1px;
+    vertical-align: bottom;
+}
+
+.price-listing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.price-new {
+    font-size: var(--font-l);
+    font-weight: 700;
+}
+
+.price-old {
+    font-size: var(--font-m);
+    color: var(--off-white);
+    text-decoration: line-through;
+}
+
+.add-to-cart {
+    color: var(--purple);
+    padding: 5px 10px;
 }
