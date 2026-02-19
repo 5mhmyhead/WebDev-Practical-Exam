@@ -60,6 +60,83 @@ a {
     text-decoration: none;
 }
 
+/* dropdown menu styling and functionality */
+.dropdown .content a {
+    min-height: 36px;
+
+    font-size: var(--font-s);
+    text-align: left;
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    border-radius: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown .content a img {
+    padding-right: 15px;
+}
+
+.dropdown .content a:hover {
+    background: #303746;
+    background: linear-gradient(90deg,rgba(48, 55, 70, 1) 0%, rgba(48, 55, 70, 0.5) 50%, rgba(237, 221, 83, 0) 100%);
+}
+
+.dropdown a:visited {
+    color: var(--white);
+}
+
+.dropdown a:active {
+    opacity: 0.9;
+    transform: scale(0.95);
+}
+
+.dropdown .divider {
+    height: 1px;
+    margin: 0 8px;
+    background-color: var(--light-grey);
+}
+
+.dropdown .content {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    right: 30px;
+    top: 80px;
+
+    position: absolute;
+    min-width: 195px;
+    min-height: 220px;
+
+    border: 1px solid var(--light-grey);
+    border-radius: 18px;
+    padding: 8px 7px;
+
+    background-color: var(--medium-grey);
+}
+
+#dropdown-toggle:checked ~ .content {
+    display: flex;
+    
+}
+
+#dropdown-toggle:checked ~ #accordion-button {
+    background-color: var(--purple);
+    color: var(--medium-grey);
+}
+
+#dropdown-toggle:checked ~ #accordion-button .menu-grey {
+    display: block;
+}
+
+#dropdown-toggle:checked ~ #accordion-button .menu-purple {
+    display: none;
+}
+
 /* proper alignment and position of logo */
 #udemy-logo {
     display: flex;
@@ -194,6 +271,10 @@ form {
     color: var(--medium-grey);
 }
 
+#log-in:active {
+    transform: scale(0.90);
+}
+
 /* sign up button hover */
 #sign-up {
     min-height: 50px;
@@ -210,6 +291,10 @@ form {
     color: var(--purple);
 }
 
+#sign-up:active {
+    transform: scale(0.90);
+}
+
 /* language button hover */
 #lang-button {
     min-height: 50px;
@@ -221,6 +306,10 @@ form {
 #lang-button:hover {
     background-color: var(--purple);
     color: var(--medium-grey);
+}
+
+#lang-button:active {
+    transform: scale(0.90);
 }
 
 .globe-grey, #lang-button:hover .globe-purple {
@@ -550,7 +639,7 @@ main {
 }
 
 .add-to-cart:active {
-    transform: scale(0.95);
+    transform: scale(0.90);
 }
 
 .add-to-cart::before,
@@ -625,6 +714,10 @@ footer {
     background-color: var(--white);
 
     padding: 5px 10px;
+}
+
+#teach-on-udemy:active {
+    transform: scale(0.90);
 }
 
 .language-option {
